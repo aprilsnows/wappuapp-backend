@@ -30,7 +30,11 @@ const schemas = {
   feedParams: {
     beforeId: Joi.number().integer().min(0).optional(),
     limit: Joi.number().integer().min(1).max(100).optional()
-  }
+  },
+
+  citiesParams: {
+    cityId: Joi.number().integer().min(0).optional(),
+  },
 };
 
 const conversions = {};

@@ -7,6 +7,7 @@ import * as actionTypeHttp from './http/action-type-http';
 import * as feedHttp from './http/feed-http';
 import * as announcementHttp from './http/announcement-http';
 import * as markerHttp from './http/marker-http';
+import * as citiesHttp from './http/cities-http';
 
 function createRouter() {
   const router = express.Router();
@@ -26,6 +27,8 @@ function createRouter() {
   router.get('/announcements', announcementHttp.getAnnouncements);
 
   router.get('/markers', markerHttp.getMarkers);
+
+  router.get('/cities', citiesHttp.getCities)
 
   return router;
 }
